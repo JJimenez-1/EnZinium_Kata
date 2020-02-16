@@ -43,5 +43,13 @@ public class TokenContract {
         return balances;
     }
 
+    public void addOwner(PublicKey PK, double units) {
+        if(!balances.containsKey(PK)) {
+            balances.put(PK, units);
+        }
+    }
 
+    public int numOwners() {
+        return getBalances().size();
+    }
 }

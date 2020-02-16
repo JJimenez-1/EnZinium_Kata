@@ -2,7 +2,7 @@ package edu.elsmancs.Enzinium;
 
 import org.junit.Before;
 import org.junit.Test;
-
+import static org.junit.Assert.*;
 import edu.elsmancs.Enzinium.Address;
 import edu.elsmancs.Enzinium.TokenContract;
 
@@ -23,6 +23,11 @@ public class TokenContractTest {
         summer.generateKeyPair();
 
         prueba = new TokenContract(morty);
-        prueba.
+        prueba.setTotalSupply(90);
+        prueba.addOwner(morty.getPK(), prueba.totalSupply());
+        prueba.setName("21 Pilots");
+        prueba.setSymbol("21");
+
+        assertEquals(1, prueba.numOwners());
     }
 }
