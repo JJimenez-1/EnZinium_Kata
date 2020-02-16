@@ -30,4 +30,18 @@ public class TokenContract {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public void setTotalSupply(double totalSupply) {
+        this.totalSupply = totalSupply;
+    }
+
+    public Map<PublicKey, Double> getBalances() {
+        return balances;
+    }
+
+
 }
