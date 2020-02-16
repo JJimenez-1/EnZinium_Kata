@@ -16,4 +16,12 @@ public class AddressTest {
        System.out.println(prueba.toString());
    }
 
+   @Test
+   public void transferEZITest() {
+      prueba.generateKeyPair();
+      prueba.transferEZI(30d);
+      double delta = 0.001;
+      assertEquals(45, prueba.getBalance(),delta);
+      System.out.println(prueba.toString());
+   }
 }
