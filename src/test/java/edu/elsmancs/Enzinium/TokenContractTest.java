@@ -46,7 +46,7 @@ public class TokenContractTest {
     @Test
     public void transferTest() {
         double delta = 0.001;
-        prueba.transfer(rick.getPK(), morty.getPK(), 5d);
+        prueba.transfer(rick.getPK(), 5d);
         assertEquals(5, prueba.balanceOf(rick.getPK()),delta);
         assertEquals(85, prueba.balanceOf(morty.getPK()), delta);
     }
