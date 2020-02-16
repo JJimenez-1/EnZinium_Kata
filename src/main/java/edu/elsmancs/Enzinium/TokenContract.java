@@ -43,6 +43,11 @@ public class TokenContract {
         return balances;
     }
 
+    @Override
+    public String toString() {
+        return ("\n" + "name = " + name() + "\n" + "symbol = " + symbol() + "\n" + "totalSupply = " + totalSupply()
+                + "\n" + "owner PK = " + owner.getPK().hashCode());
+    }
     public void addOwner(PublicKey PK, double units) {
         if(!balances.containsKey(PK)) {
             balances.put(PK, units);
