@@ -1,5 +1,6 @@
 package edu.elsmancs.Enzinium;
 
+import org.checkerframework.checker.fenum.qual.SwingTitlePosition;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -29,5 +30,10 @@ public class TokenContractTest {
         prueba.setSymbol("21");
 
         assertEquals(1, prueba.numOwners());
+    }
+
+    @Test
+    public void toStringTest() {
+        System.out.println(prueba.toString());
     }
 }
