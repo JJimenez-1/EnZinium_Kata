@@ -42,4 +42,12 @@ public class TokenContractTest {
         double delta = 0.001;
         assertEquals(90, prueba.balanceOf(morty.getPK()), delta);
     }
+
+    @Test
+    public void transferTest() {
+        double delta = 0.001;
+        prueba.transfer(rick.getPK(), morty.getPK(), 5d);
+        assertEquals(5, prueba.balanceOf(rick.getPK()),delta);
+        assertEquals(85, prueba.balanceOf(morty.getPK()), delta);
+    }
 }
