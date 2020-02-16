@@ -54,6 +54,10 @@ public class TokenContract {
         }
     }
 
+    public double balanceOf(PublicKey pk) {
+        return balances.getOrDefault(pk, 0d);
+    }
+
     public int numOwners() {
         return getBalances().size();
     }
