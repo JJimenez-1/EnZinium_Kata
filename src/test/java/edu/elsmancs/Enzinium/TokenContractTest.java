@@ -36,4 +36,10 @@ public class TokenContractTest {
     public void toStringTest() {
         System.out.println(prueba.toString());
     }
+
+    @Test
+    public void balanceOfTest() {
+        double delta = 0.001;
+        assertEquals(90, prueba.balanceOf(morty.getPK()), delta);
+    }
 }
